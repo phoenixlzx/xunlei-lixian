@@ -74,12 +74,12 @@ def output_tasks(tasks, columns, args, top=True):
 					if top:
 						print '#%d' % t['#'],
 				elif k == 'id':
-					print t.get('index', t['id']),
+					print t.get('index', t['id']), '|',
 				elif k == 'name':
-					print t['name'].encode(default_encoding),
+					print t['name'].encode(default_encoding), '|',
 				elif k == 'status':
 					with colors(args.colors).bold():
-						print t['status_text'],
+						print t['status_text'], '|',
 				elif k == 'size':
 					if args.format_size:
 						from lixian_util import format_size
